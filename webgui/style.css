@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@500;700&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+    margin: 0;
+    padding: 0;
+    color: #00ffea;
+    transition: background 0.5s ease;
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: rgba(10, 10, 10, 0.85);
+    padding: 20px 30px;
+    box-shadow: 0 0 30px #00ffea;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 0 50px #00ffea;
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffea;
+    transition: color 0.3s ease;
+}
+
+textarea {
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #00ffea;
+    border-radius: 6px;
+    resize: vertical;
+    background-color: #0a0a0a;
+    color: #00ffea;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+textarea::placeholder {
+    color: #004d40;
+}
+
+textarea:focus {
+    border-color: #00fff7;
+    outline: none;
+    background-color: #001f1f;
+}
+
+button {
+    background-color: #00ffea;
+    color: #001f1f;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 10px #00ffea;
+}
+
+button:hover {
+    background-color: #00bfa5;
+    color: #e0f7f5;
+    box-shadow: 0 0 20px #00bfa5;
+}
+
+pre {
+    background-color: #001f1f;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #00ffea;
+    font-size: 14px;
+    box-shadow: 0 0 15px #00ffea;
+    transition: background-color 0.3s ease;
+}
+
+pre:hover {
+    background-color: #003737;
+}
+
+.error {
+    background-color: #ff1744;
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 0 10px #ff1744;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #00ffea;
+    color: #001f1f;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    box-shadow: 0 0 15px #00ffea;
+}
