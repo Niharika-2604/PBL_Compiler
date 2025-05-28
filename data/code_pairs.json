@@ -1,0 +1,57 @@
+[
+  {
+    "id": "sample_001",
+    "original_code": "def benchmark():\n    result = 0\n    for i in range(1000):\n        result += i * i\n    return result",
+    "optimized_code": "def benchmark():\n    result = 0\n    i = 0\n    while i < 1000:\n        result += i * i\n        result += i * i\n        i += 2\n    return result",
+    "transformation": "loop_unrolling",
+    "metrics": {
+      "original_time_ms": 1.73,
+      "optimized_time_ms": 1.23,
+      "speedup_percent": 28.9
+    }
+  },
+  {
+    "id": "sample_002",
+    "original_code": "def benchmark():\n    if False:\n        return some_heavy_calc()\n    return 42",
+    "optimized_code": "def benchmark():\n    return 42",
+    "transformation": "dead_code_elimination",
+    "metrics": {
+      "original_time_ms": 0.15,
+      "optimized_time_ms": 0.12,
+      "speedup_percent": 20.0
+    }
+  },
+  {
+    "id": "sample_003",
+    "original_code": "def double(x):\n    return x * 2\n\ndef benchmark():\n    return double(21)",
+    "optimized_code": "def benchmark():\n    return (21 * 2)",
+    "transformation": "function_inlining",
+    "metrics": {
+      "original_time_ms": 0.19,
+      "optimized_time_ms": 0.14,
+      "speedup_percent": 26.3
+    }
+  },
+  {
+    "id": "sample_004",
+    "original_code": "def benchmark():\n    x = 3 * 4\n    y = x + 2\n    return y",
+    "optimized_code": "def benchmark():\n    y = 14\n    return y",
+    "transformation": "constant_folding",
+    "metrics": {
+      "original_time_ms": 0.18,
+      "optimized_time_ms": 0.11,
+      "speedup_percent": 38.9
+    }
+  },
+  {
+    "id": "sample_005",
+    "original_code": "def benchmark():\n    result = []\n    for i in range(10000):\n        result.append(i)\n    return result",
+    "optimized_code": "def benchmark():\n    return list(range(10000))",
+    "transformation": "vectorization_manual",
+    "metrics": {
+      "original_time_ms": 4.9,
+      "optimized_time_ms": 2.1,
+      "speedup_percent": 57.14
+    }
+  }
+]
