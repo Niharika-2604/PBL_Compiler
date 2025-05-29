@@ -1,13 +1,3 @@
-# Extract ML features from code
-"""
-feature_extractor.py
-
-This module handles the extraction of features from code pairs for use
-in machine learning models. Features include structural AST-based code 
-features and optionally performance metrics.
-
-Author: Your Name
-"""
 
 from typing import List, Tuple, Dict
 from utils.data_loader import load_code_pairs
