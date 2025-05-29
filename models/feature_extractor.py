@@ -54,14 +54,7 @@ def extract_with_metrics(data_path: str = "data/code_pairs.json") -> Tuple[List[
 
 
 def preview_feature_set(X, y, count: int = 3):
-    """
-    Print sample features for inspection.
-
-    Args:
-        X: List of feature dicts OR Pandas DataFrame
-        y: List of labels
-        count (int): Number of records to preview
-    """
+   
     print("🔍 Feature Preview:")
     print("=" * 40)
 
