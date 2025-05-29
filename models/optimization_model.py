@@ -83,15 +83,7 @@ def predict_transformation(model, features: Dict[str, float]) -> str:
 # ===============================
 
 def get_feature_importances(model):
-    """
-    Get feature importances from the trained RandomForest model.
-
-    Args:
-        model: Trained RandomForestClassifier
-
-    Returns:
-        dict: Mapping of feature names to importance scores
-    """
+  
     try:
         feature_names = []
         # Extract feature names from training data
