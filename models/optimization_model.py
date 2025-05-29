@@ -21,15 +21,7 @@ MODEL_PATH = os.path.join(MODEL_DIR, MODEL_FILENAME)
 # ===============================
 
 def train_model(save: bool = True) -> RandomForestClassifier:
-    """
-    Train the optimization prediction model using extracted features.
-
-    Args:
-        save (bool): Whether to save the trained model
-
-    Returns:
-        RandomForestClassifier: The trained model
-    """
+   
     X, y = extract_features_and_labels()
 
     if not X or not y:
