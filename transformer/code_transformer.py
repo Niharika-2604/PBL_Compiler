@@ -1,12 +1,4 @@
-# Applies model's suggested changes
-"""
-code_transformer.py
 
-Applies predicted optimizations to original Python code by transforming
-its AST using transformation rules like loop unrolling, function inlining, etc.
-
-Author: Your Name
-"""
 
 import ast
 import astor
