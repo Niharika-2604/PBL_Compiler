@@ -8,10 +8,7 @@ import astor
 # ===============================
 
 class LoopUnroller(ast.NodeTransformer):
-    """
-    A basic unroller that doubles loop iterations.
-    Only works on simple for-loops over a range.
-    """
+    
     def visit_For(self, node):
         self.generic_visit(node)
         if isinstance(node.iter, ast.Call) and hasattr(node.iter.func, "id") and node.iter.func.id == "range":
@@ -74,10 +71,7 @@ class DeadCodeEliminator(ast.NodeTransformer):
 # ===============================
 
 def inline_functions(code: str) -> str:
-    """
-    Simple string-based function inliner:
-    Assumes basic use case: one-liner functions used once.
-    """
+    
     lines = code.split("\n")
     func_defs = {}
     new_lines = []
