@@ -10,9 +10,7 @@ import os
 # Feature extraction
 from models.feature_extractor import extract_features_and_labels
 
-# ===============================
-# Paths & Config
-# ===============================
+
 
 MODEL_DIR = "models"
 MODEL_FILENAME = "optimization_predictor.pkl"
