@@ -27,16 +27,7 @@ def extract_features_and_labels(data_path: str = "data/code_pairs.json") -> Tupl
 
 
 def extract_with_metrics(data_path: str = "data/code_pairs.json") -> Tuple[List[Dict], List[str]]:
-    """
-    Extract features and include performance metrics (optional enrichment).
-
-    Args:
-        data_path (str): JSON dataset path
-
-    Returns:
-        X (List[Dict]): Feature + metrics per sample
-        y (List[str]): Labels
-    """
+   
     data = load_code_pairs(data_path)
     X, y = [], []
 
