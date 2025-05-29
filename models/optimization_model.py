@@ -1,12 +1,4 @@
-# ML model for optimization
-"""
-optimization_model.py
 
-Handles training, saving, loading, and inference for the optimization
-prediction model used in AI-assisted compilers.
-
-Author: Your Name
-"""
 
 from typing import List, Dict
 from sklearn.ensemble import RandomForestClassifier
