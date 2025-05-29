@@ -53,15 +53,7 @@ def train_model(save: bool = True) -> RandomForestClassifier:
 # ===============================
 
 def load_model(path: str = MODEL_PATH) -> RandomForestClassifier:
-    """
-    Load the trained model from disk.
-
-    Args:
-        path (str): Path to the saved model file
-
-    Returns:
-        RandomForestClassifier: Loaded model
-    """
+   
     if not os.path.exists(path):
         raise FileNotFoundError(f"❌ Model file not found: {path}")
     model = joblib.load(path)
