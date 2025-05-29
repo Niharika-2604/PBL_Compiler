@@ -65,16 +65,7 @@ def load_model(path: str = MODEL_PATH) -> RandomForestClassifier:
 # ===============================
 
 def predict_transformation(model, features: Dict[str, float]) -> str:
-    """
-    Predict the optimization transformation to apply based on features.
-
-    Args:
-        model: Trained classifier model
-        features: Feature dictionary from AST feature extraction
-
-    Returns:
-        str: Predicted transformation
-    """
+    
     if not model or not features:
         return "unknown"
 
