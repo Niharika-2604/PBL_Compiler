@@ -1,13 +1,4 @@
-# Training script for ML model
-"""
-train.py
 
-Trainer script for the AI optimization prediction model.
-Loads features and labels from code_pairs.json, trains the model, evaluates,
-and saves it to disk for use in the compiler pipeline.
-
-Author: Your Name
-"""
 
 from models.feature_extractor import extract_features_and_labels, preview_feature_set
 from models.optimization_model import train_model
