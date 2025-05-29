@@ -99,16 +99,7 @@ def inline_functions(code: str) -> str:
 # ===============================
 
 def apply_transformation(code: str, transformation_type: str) -> str:
-    """
-    Apply the given transformation to the source code.
-
-    Args:
-        code (str): Original source code
-        transformation_type (str): e.g., 'loop_unrolling'
-
-    Returns:
-        str: Optimized/transformed code
-    """
+   
 
     try:
         tree = ast.parse(code)
