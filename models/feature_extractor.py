@@ -5,16 +5,7 @@ from utils.ast_utils import get_ast_features
 
 
 def extract_features_and_labels(data_path: str = "data/code_pairs.json") -> Tuple[List[Dict], List[str]]:
-    """
-    Load the dataset and extract features/labels for training.
-
-    Args:
-        data_path (str): Path to code_pairs.json
-
-    Returns:
-        X (List[Dict]): Feature vectors
-        y (List[str]): Corresponding transformation labels
-    """
+ 
     data = load_code_pairs(data_path)
 
     X = []  # Feature vectors
